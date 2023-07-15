@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/id_card_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    app:contentPadding="4dp"
+    android:elevation="13dp"
+    app:cardBackgroundColor="#FFFF"
+
+    app:cardCornerRadius="10dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="318dp"
+        android:padding="16dp">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/id_list_adapter_imageView"
+            android:layout_width="160dp"
+            android:layout_height="160dp"
+            app:circularflow_defaultRadius="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:shapeAppearanceOverlay="@style/RoundedSquare" />
+
+        <TextView
+            android:id="@+id/id_list_adapter_title_textView"
+            android:layout_width="0dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="16dp"
+
+            android:text="TextView"
+            android:textColor="@color/design_default_color_on_secondary"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/id_list_adapter_imageView"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/id_list_adapte_dietLabels_textView"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="23dp"
+            android:breakStrategy="high_quality"
+            android:gravity="center"
+            android:text="TextView"
+            android:textColor="@color/design_default_color_on_secondary"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/id_list_adapter_imageView"
+            app:layout_constraintTop_toBottomOf="@+id/id_list_adapter_dishtype_textView" />
+
+        <TextView
+            android:id="@+id/id_list_adapter_mealtype_textView"
+            android:layout_width="0dp"
+            android:layout_height="27dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:text="MealType"
+            android:textColor="@color/material_dynamic_primary40"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/id_list_adapter_imageView"
+            app:layout_constraintTop_toBottomOf="@+id/id_list_adapter_title_textView" />
+
+        <TextView
+            android:id="@+id/id_list_adapter_cusinetype_textView"
+            android:layout_width="0dp"
+            android:layout_height="27dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:text="CusineType"
+            android:textColor="@color/material_dynamic_primary40"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/id_list_adapter_imageView"
+            app:layout_constraintTop_toBottomOf="@+id/id_list_adapter_mealtype_textView" />
+
+        <TextView
+            android:id="@+id/id_list_adapter_dishtype_textView"
+            android:layout_width="0dp"
+            android:layout_height="28dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:text="DishType"
+            android:textColor="@color/material_dynamic_primary40"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/id_list_adapter_imageView"
+            app:layout_constraintTop_toBottomOf="@+id/id_list_adapter_cusinetype_textView" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="57dp"
+            android:layout_height="22dp"
+            android:layout_marginTop="16dp"
+            android:fontFamily="sans-serif-black"
+            android:text="Calories"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/id_list_adapter_imageView" />
+
+        <TextView
+            android:id="@+id/id_list_adapter_calories_count_textView"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="8dp"
+            android:fontFamily="sans-serif-black"
+            android:gravity="center"
+            android:textColor="#F44336"
+            android:textSize="34sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/id_list_adapte_dietLabels_textView"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+        <ImageView
+            android:id="@+id/id_fav_imageView"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/heart" />
+
+        <!--        <include layout="@layout/card_linear_layout"/>-->
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1053779736804",
+    "project_id": "schedule-my-diet",
+    "storage_bucket": "schedule-my-diet.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1053779736804:android:2488af2c5804c786b194f1",
+        "android_client_info": {
+          "package_name": "com.example.schedulemydiet"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1053779736804-bcajaoa7gph9nshi0160hk9mjjo320bc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBI_WJwh8O24Ua1kBEMldUUUsol5-SWuOw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1053779736804-bcajaoa7gph9nshi0160hk9mjjo320bc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

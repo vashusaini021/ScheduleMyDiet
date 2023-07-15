@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".home.HomeFragment">
+
+    <SearchView
+        android:id="@+id/id_recipeSearchView"
+        android:layout_width="0dp"
+
+        android:layout_height="48dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginEnd="6dp"
+        app:layout_constraintEnd_toStartOf="@+id/id_reset_all_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </SearchView>
+
+    <ScrollView
+        android:id="@+id/id_scrollView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="50dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/id_recipeSearchView">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <Spinner
+                android:id="@+id/id_diet_spinner"
+                android:layout_width="384dp"
+                android:layout_height="48dp"
+                android:layout_margin="12dp"
+                android:contentDescription="Diet"
+                android:dropDownWidth="wrap_content" />
+
+            <Spinner
+                android:id="@+id/id_health_spinner"
+                android:layout_width="384dp"
+                android:layout_height="48dp"
+                android:layout_margin="12dp"
+                android:contentDescription="Health"
+                android:dropDownWidth="wrap_content" />
+
+            <Spinner
+                android:id="@+id/id_cusinetype_spinner"
+                android:layout_width="384dp"
+                android:layout_height="48dp"
+                android:layout_margin="12dp"
+                android:contentDescription="Cusine Type"
+                android:dropDownWidth="wrap_content" />
+
+            <Spinner
+                android:id="@+id/id_mealtype_spinner"
+                android:layout_width="384dp"
+                android:layout_height="48dp"
+                android:layout_margin="12dp"
+                android:contentDescription="Meal Type"
+                android:dropDownWidth="wrap_content" />
+
+            <Spinner
+                android:id="@+id/id_dishtype_spinner"
+                android:layout_width="384dp"
+                android:layout_height="48dp"
+                android:layout_margin="12dp"
+                android:contentDescription="Dish Type"
+                android:dropDownWidth="wrap_content" />
+
+            <EditText
+                android:id="@+id/id_editTextCalories"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="12dp"
+                android:ems="10"
+                android:hint="Calories"
+                android:inputType="number|numberSigned"
+                android:minHeight="48dp" />
+
+            <EditText
+                android:id="@+id/id_editTextGlycemiceIndex"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="12dp"
+                android:ems="10"
+                android:hint="Glycemic Index"
+                android:inputType="numberDecimal"
+                android:minHeight="48dp" />
+
+            <EditText
+                android:id="@+id/id_editTextText_excludedItems"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="12dp"
+                android:ems="10"
+                android:gravity="start|top"
+                android:hint="Excluded Items comma(,) seprated for ex - vinegar, pretzel"
+                android:inputType="textMultiLine" />
+
+            <Button
+                android:id="@+id/idSearchButton"
+                android:layout_width="345dp"
+                android:layout_height="48dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="53dp"
+                android:layout_marginEnd="5dp"
+                android:background="@drawable/common_primary_button"
+                android:text="Search"
+                android:textColor="@color/design_default_color_primary_dark" />
+
+
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/id_reset_all_button"
+        android:layout_width="0dp"
+        android:layout_height="58dp"
+        android:layout_marginTop="-4dp"
+        android:layout_marginEnd="4dp"
+        android:text="Reset Alll"
+        android:textColor="@android:color/holo_red_light"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
