@@ -49,6 +49,12 @@ public class HomeFragment extends Fragment {
             }
         });
 
+        binding.idResetAllButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                DishFilterHelper.getInstance().clearFilter();
+            }
+        });
         return root;
     }
 

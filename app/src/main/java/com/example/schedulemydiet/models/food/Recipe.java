@@ -58,6 +58,8 @@ public class Recipe implements Serializable {
 
     public String getDishTypeString() {
         String data  = "";
+        if(dishType == null)
+            return data;
         for(String str: dishType){
             data += (str.substring(0, 1).toUpperCase() + str.substring(1)) + ", ";
         }

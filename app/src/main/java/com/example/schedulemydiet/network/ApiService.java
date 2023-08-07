@@ -3,8 +3,13 @@ package com.example.schedulemydiet.network;
 import android.content.Context;
 import android.util.Log;
 import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonParser;
+
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import java.io.IOException;
 import java.util.List;
 import java.util.Map;
@@ -57,8 +62,14 @@ public class ApiService {
                     String responseData = response.body().string();
                     JsonElement jsonElement = new JsonParser().parse(responseData);
                     Log.d("API", "URL: " + call.request().url());
-                    Log.d("API", "Success: " + jsonElement);
-                    callback.apiCallCompleted(true, jsonElement.getAsJsonObject());
+                    try {
+                        Log.d("API", "Success: " + (new JSONObject(responseData)).toString(4));
+                    } catch (JSONException e) {
+                        Log.d("API", "Unable to parse formatted response : " + jsonElement );
+                    } finally {
+                        callback.apiCallCompleted(true, jsonElement.getAsJsonObject());
+                    }
+
                 } else {
                     Log.d("API", "URL: " + call.request().url());
                     Log.e("API", "Failure: " + response.toString());

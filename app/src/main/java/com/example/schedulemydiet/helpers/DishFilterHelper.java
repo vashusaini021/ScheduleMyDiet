@@ -39,6 +39,14 @@ public class DishFilterHelper {
         return instance;
     }
 
+    public void clearFilter() {
+        selectedDietType.clear();
+        selectedHealthType.clear();
+        selectedCuisineType.clear();
+        selectedMealType.clear();
+        selectedDishType.clear();
+    }
+
     public CheckableSpinnerAdapter getMyAdapter(FILTER_TYPE filter, Context context) {
 
         switch (filter) {
